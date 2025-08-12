@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { AppContext } from './ContextApp/AppContext'
 
 const Page = () => {
-  const { pages, Handlepagechange, totalPage } = useContext(AppContext);
+  const { pages, handlePageChange, totalPage } = useContext(AppContext);
 
 
   return (
@@ -10,10 +10,10 @@ const Page = () => {
       <div className=' flex justify-between w-11/12 max-w-[670px] py-2 '>
         <div className='flex gap-x-2'>
           {
-            pages > 1 && (<button className='rounded border px-5 py-1' onClick={() => Handlepagechange(pages - 1)}>Previous</button>)
+            pages > 1 && (<button className='rounded border px-5 py-1' onClick={() => handlePageChange(pages - 1)}>Previous</button>)
           }
           {
-            pages < totalPage && (<button className='rounded border px-5 py-1' onClick={() => Handlepagechange(pages + 1)}>Next</button>)
+            pages < totalPage && (<button className='rounded border px-5 py-1' onClick={() => handlePageChange(pages + 1)}>Next</button>)
           }
         </div>
 

@@ -1,6 +1,6 @@
-
 import { createContext, useState } from "react";
 import { baseUrl } from "../baseUrl";
+import { useNavigate } from "react-router-dom";
 
 export const AppContext = createContext();
 
@@ -9,40 +9,46 @@ export default function AppContextProvider({ children }) {
   const [posts, setPosts] = useState([]);
   const [pages, setPages] = useState(1);
   const [totalPage, setTotalPage] = useState(null);
+  const [tag, setTag] = useState(null);
+  const [category, setCategory] = useState(null);
+  const navigate = useNavigate();
 
-  async function fetchblogPost(page = 1, tag= null , category) {
+  async function fetchblogPost(page = 1, tag = null, category = null) {
     setLoading(true);
-    const url = `${baseUrl}?page=${page}`;
-    if(tag){
-      url += `&tag=${tag}`
+    let url = `${baseUrl}?page=${page}`;
+    if (tag) {
+      url += `&tag=${tag}`;
     }
-    if(category){
-      url += `&category=${category}`
+    if (category) {
+      url += `&category=${category}`;
     }
 
     try {
-        const result = await fetch(url);
+      const result = await fetch(url);
       const data = await result.json();
-       // Debugging
-       console.log(data)
+      console.log(data);
       setPages(data.page);
       setPosts(data.posts);
-      setTotalPage(data.totalPages); // double check key name
+      setTotalPage(data.totalPages);
     } catch (e) {
       console.error("Error fetching posts:", e);
       setPages(1);
       setPosts([]);
-      setTotalPage(null); // ✅ fixed
+      setTotalPage(null);
     }
 
     setLoading(false);
   }
 
-  function Handlepagechange(page) {
+  const handlePageChange = (page) => {
+     navigate({ search : `?page=${page}`});
     setPages(page);
-    fetchblogPost(page);
-  }
 
+  }
+ 
+
+    
+  
   const value = {
     loading,
     setLoading,
@@ -52,8 +58,12 @@ export default function AppContextProvider({ children }) {
     setPages,
     totalPage,
     setTotalPage,
-    Handlepagechange,
-    fetchblogPost
+    tag,
+    setTag,
+    category,
+    setCategory,
+    handlePageChange,
+    fetchblogPost,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

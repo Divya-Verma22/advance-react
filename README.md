@@ -65,3 +65,27 @@ Context API
 Fetch API
 CSS (basic styling)
 
+<!-- ----------------------------project-7 advance part--------------------------------->
+This project is part of my Advanced React learning journey.
+It’s a Blog Web App that uses Context API for state management and fetches all data dynamically from an API.
+It also supports page changes, related blog navigation, API query parameter manipulation, and search functionality.
+
+🚀 Features
+Dynamic Routing – Navigate between different pages without reloads.
+Context API for State Management – Share and manage global data easily across components.
+API Integration – Fetch blog posts, related blogs, and more directly from an API.
+Related Blog Navigation – Click on a blog link to view its related blogs fetched dynamically.
+API Query Parameter Handling – Use searchParams to filter, paginate, and fetch relevant data.
+Search Functionality – Search blogs based on keywords.
+Responsive UI – Works seamlessly on mobile, tablet, and desktop.
+
+🛠️ Tech Stack
+React.js (Advanced Concepts)
+React Router DOM (Page navigation)
+Context API (State management)
+Fetch API / Axios (Data fetching)
+URLSearchParams (Manipulating API queries)
+CSS (Responsive design)
+
+
+
