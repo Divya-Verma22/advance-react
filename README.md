@@ -87,5 +87,87 @@ Fetch API / Axios (Data fetching)
 URLSearchParams (Manipulating API queries)
 CSS (Responsive design)
 
+<!-- ------------------------------------Last Day----------------------------------- -->
+🚀 My React Learning Journey
+
+This repository documents my progress from React basics to advanced concepts, including building multiple projects to strengthen my skills.
+
+📚 What I Learned
+React Basics
+Understanding JSX and components (functional & class-based)
+Props and State
+Event handling in React
+Conditional rendering
+List rendering with .map()
+Controlled vs uncontrolled components
+Forms and form handling
+Component lifecycle methods (Class components) and useEffect (Functional components)
+Basic styling with CSS and Tailwind CSS
+React Intermediate
+React Router for navigation between pages
+Dynamic routing and route parameters
+Lifting state up to parent components
+Passing data between components
+Reusable UI components
+Fetching data from APIs using fetch & axios
+Error handling in API calls
+Using SearchParams for filtering data
+Conditional UI rendering with fetched data
+State Management
+Context API
+Creating a global state using Context API
+Using useContext hook
+Avoiding prop drilling by sharing data globally
+Built a Blog Project where clicking a link shows related blog data using Context API
+<!-- -----------------------------Redux Toolkit----------------------- -->
+Understanding configureStore, createSlice, and reducers
+Using useSelector and useDispatch
+Creating actions to update global state
+Implementing middleware logic
+Built a Counter App with Redux Toolkit for state management
+Built a Cart Project with add/remove items and calculating total amount
+
+
+React Advanced
+Modern UI with Tailwind CSS and custom themes
+Responsive layouts with Flexbox and Grid
+Code splitting & lazy loading
+Optimizing performance with useMemo and useCallback
+Advanced form handling with controlled components
+
+Working with custom hooks
+Clean folder structure for scalable apps
+Reusable and modular components
+Project-based learning approach for real-world scenarios
+
+📂 Projects I Built
+Created total 8 project during my learning jouney of which 3 are of Advance React based
+1. Blog Project (Context API)
+
+Used Context API to share blog data globally
+Implemented routing for blog details page
+Search & filter functionality using API data
+
+2. Counter App (Redux Toolkit)
+Used Redux Toolkit for global state
+Increment, decrement, and reset counter
+Learned reducer logic and action dispatching
+
+3. Cart Project (Redux Toolkit + Tailwind CSS)
+Add to cart, remove from cart functionality
+Calculate total price dynamically
+Responsive, modern UI with green-themed design
+
+Used useSelector for state reading and useDispatch for actions
+
+🛠 Tech Stack
+React.js
+React Router DOM
+Redux Toolkit
+Context API
+JavaScript (ES6+)
+Tailwind CSS
+Axios / Fetch API
+
 
 

@@ -11,7 +11,7 @@ const UseGif = (tag) => {
     const [gif, setGif] = useState("");
     const[loading , setLoading] = useState(false);
 
-
+                                                                                                                                                                                                                             
     async function fetchData(tag) {
         setLoading(true);
         console.log(tag);
